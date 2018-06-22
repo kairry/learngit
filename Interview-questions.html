@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>面试题</title>
+		<style type="text/css">
+			.wrap{
+				position: relative;
+				width: 500px;
+				height: 500px;
+				border: solid 2px red;
+				outline: dotted 2px black;
+				outline-offset: 10px;
+				margin: 100px;
+			}
+			.content{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				border: solid 1px greenyellow;
+				top: 50%;
+				left: 50%;
+				margin: -100px 0 0 -100px;
+				outline: dashed 2px yellow;
+				outline-offset: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="content"></div>
+		</div>
+		<script>
+			var isstring = isString('xiaoming');
+			var obj = 'abc';
+			console.log(typeof(obj) === 'string');
+			console.log(typeof obj === 'string');
+			console.log(obj.constructor === String);
+			/*定义和用法
+			constructor 属性返回对创建此对象的数组函数的引用(返回调用此属性的数据类型)。*/
+			function isString(obj) {
+				return typeof(obj) === 'string'? true:false;
+			}
+			
+			var arr = [1,2,3,4];
+			var arr2 = [];
+			while(arr.length) {
+				var num = arr.pop();
+				arr2.push(num);
+			}
+			console.log(arr2);
+			console.log(arr2.reverse());
+			
+			var arr3 = [5,6,7,8];
+			var arr4 = [];
+			while(arr3.length) {
+				var num = arr3.shift();
+				arr4.unshift(num);
+			}
+			console.log(arr4);
+			
+		</script>
+	</body>
+</html>
